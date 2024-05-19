@@ -1,9 +1,9 @@
-'use client'
 import React from 'react'
 
-const footer = () => {
+const memories = () => {
   return (
     <div>page</div>
   )
 }
-export default footer 
+
+export default memories
