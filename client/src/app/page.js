@@ -7,7 +7,10 @@ const main = () => {
     <div>
 <CustomNavbar/>
     <div>
-      
+      <h1>
+        Explore
+        
+      </h1>
       <div>
         <div>
         </div>
