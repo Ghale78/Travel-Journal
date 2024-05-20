@@ -12,18 +12,18 @@ const CustomNavbar =()=> {
       </NavbarBrand>
       <NavbarContent className="flex sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
-            H
+        <Link href="" aria-current="page">
+            Home
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
           <Link href="#" aria-current="page">
-            M
+            Explore
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
-            L
+        <Link href="#" aria-current="page">
+            Contribute
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -32,8 +32,8 @@ const CustomNavbar =()=> {
           <Link href="#">Login</Link> 
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" href="register" variant="flat">
-            Sign up 
+          <Button as={Link} color="primary" href="login" variant="flat">
+            Login
           </Button>
         </NavbarItem>
       </NavbarContent>
