@@ -72,6 +72,4 @@ const Contribute =()=> {
     </div>
   );
 }
-
-
 export default Contribute

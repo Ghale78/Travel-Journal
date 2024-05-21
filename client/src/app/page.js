@@ -19,5 +19,4 @@ const main = () => {
     </div>
   )
 }
-
 export default main

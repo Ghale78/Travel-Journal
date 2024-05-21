@@ -3,8 +3,6 @@ import React from "react";
 import Link from 'next/link';
 import {Button,} from "@nextui-org/react";
 import {Input} from "@nextui-org/react";
-import { loadGetInitialProps } from "next/dist/shared/lib/utils";
-import sidebar from "@/component/sidebar/page";
 
 
 const login =()=> {

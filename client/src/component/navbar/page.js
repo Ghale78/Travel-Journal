@@ -1,14 +1,14 @@
 'use client'
 import React from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
-// import {AcmeLogo} from "./AcmeLogo.jsx";
+// import {AcmeLogo} from "./Logo.jsx";
 
 const CustomNavbar =()=> {
   return (
     <Navbar isBordered>
       <NavbarBrand>
-        {/* <AcmeLogo />
-        <p className="font-bold text-inherit">ACME</p> */}
+        {/* <Logo />
+        <p className='logo'>Travel</p> */}
       </NavbarBrand>
       <NavbarContent className="flex sm:flex gap-4" justify="center">
         <NavbarItem>
