@@ -6,14 +6,14 @@ const main = () => {
   return (
     <div>
 <CustomNavbar/>
-    <div className='d1 text-center m-5'> 
+    <div className='d1 text-center m-5 '> 
       <h1>    
         Explore
       </h1>
-        <div>
+        <div className='card'>
           
-        <div>
-        </div>
+        <div className='footer'>
+      </div>
       </div>
     </div>
     </div>
