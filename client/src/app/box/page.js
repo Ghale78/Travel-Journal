@@ -23,8 +23,7 @@ const Box = () => {
       {generateArea()}
       <Button onClick={()=> dispatch(shiftPosition(100))}>Left</Button>
       <Button onClick={()=> dispatch(shiftPosition(-100))}>Right</Button>
-      {/* <Button onClick={()=> dispatch(shiftPosition())}>Top</Button>
-      <Button onClick={()=> dispatch(shiftPosition())}>Bottom</Button> */}
+      <Button onClick={()=> dispatch(shiftPositionTop())}>Top</Button>
 
     <Button onClick={()=>dispatch(changeWidth())}>Width</Button>
     <Button onClick={()=> dispatch(changeHeight())}>Height</Button>

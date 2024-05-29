@@ -40,11 +40,13 @@ const boxSlice = createSlice({
       state.backgroundColor = actions.payload
     },
     shiftPosition(state,actions) {
+      state.top = 0
       state.right = actions.payload
     },
-    // shiftPosition(state,actions) {
-    //   state.top = actions.payload
-    // },
+    shiftPositionTop(state,actions) {
+      state.right= 0
+      state.top = actions.payload
+    },
     
   },
 })
