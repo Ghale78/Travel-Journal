@@ -2,8 +2,12 @@ const express = require('express')
 const app = express()
 const port = 4000
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
+app.get('/K', (req, res) => {
+  res.send({
+    name:"Kapil",
+    balance:1000,
+    address:"kalopol",
+  })
 })
 
 app.listen(port, () => {

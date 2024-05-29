@@ -10,7 +10,7 @@ const CustomNavbar =()=> {
         {/* <Logo />
         <p className='logo'>Travel</p> */}
       </NavbarBrand>
-      <NavbarContent className="flex sm:flex gap-4 ">
+      <NavbarContent className="flex sm:flex gap-4" justify="end">
         <NavbarItem>
         <Link href="" aria-current="page">
             Home

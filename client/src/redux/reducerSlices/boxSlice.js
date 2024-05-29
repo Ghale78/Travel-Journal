@@ -1,34 +1,53 @@
-import { clearAllListeners, createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = { 
     backgroundColor: 'red', 
+    right: 0,
+    left :0,
+    top :0,
+    bottom:0,
     width: 50,
     height: 50,
-    borderRadius: '',
+    borderRadius: '0%'
 }
-
 const boxSlice = createSlice({
   name: 'box',
   initialState: initialState,
   reducers: {
     changeHeight(state) {
-      state.height=state.height+5
+      if(state.borderRadius === '50%'){
+        const newHeight = state.height + 5
+        state.width = newHeight
+        state.height = newHeight
+      }else{
+        state.height=state.height+5
+      } 
     },
     changeWidth(state) {
-      state.width=state.width+5
-    },
-    changecircle(state) {
-      if( state.borderRadius == 'rounded-full'){
-        state.borderRadius=''
+      if(state.borderRadius === '50%'){
+        const newWidth = state.width + 5
+        state.width = newWidth
+        state.height = newWidth
+      }else{
+        state.width=state.width + 5
       }
-      else{
-      state.borderRadius='rounded-full'}
     },
-    changecolor(state,color){
-      state.backgroundColor=color.payload
-    }
+    changeShape(state) {
+      state.borderRadius = '50%'
+      state.width=state.height
+    },
+    changeBackgroundColor(state,actions) {
+      state.backgroundColor = actions.payload
+    },
+    shiftPosition(state,actions) {
+      state.right = actions.payload
+    },
+    // shiftPosition(state,actions) {
+    //   state.top = actions.payload
+    // },
+    
   },
 })
 
-export const { changeHeight, changeWidth ,changecircle,changecolor} = boxSlice.actions
+export const { changeHeight,top, changeShape,shiftPosition, changeWidth,changeBackgroundColor } = boxSlice.actions
 export default boxSlice.reducer

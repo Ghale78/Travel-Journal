@@ -1,30 +1,75 @@
 'use client'
+// import React from 'react'
 import React from "react";
-import Link from 'next/link';
-import {Button,} from "@nextui-org/react";
-import {Input} from "@nextui-org/react";
+import {Tabs, Tab, Input, Link, Button, Card, CardBody, CardHeader} from "@nextui-org/react";
 
 
 const login =()=> {
-  const variants = ["underlined"];
+  const [selected, setSelected] = React.useState("login");
 
   return (
-    <div className="flex justify-center"> 
     <div>
-      {variants.map((variant) => (
-          <div className='   w-72 p-4  '>
-          <Input type="email" variant={"underlined"} label="Email"/><br/>
-          <Input type="password" variant={"underlined"} label="Password"/><br/>
-          <Button color="success">
-        Login
-      </Button> <br/>
-      Don't have account ? <Link href='register'>register</Link> 
-        </div> 
-      ))}  
-    </div>
 
-    </div>  
+    <div className=" flex justify-center p-20 px ">
+      <Card className="max-w-full w-[340px] h-[400px]">
+        <CardBody className="overflow-hidden">
+          <Tabs
+            fullWidth
+            size="md"
+            aria-label="Tabs form"
+            selectedKey={selected}
+            onSelectionChange={setSelected}
+          >
+            <Tab key="login" title="Login">
+              <form className="flex flex-col gap-4">
+                <Input isRequired label="Email" placeholder="" type="email" />
+                <Input
+                  isRequired
+                  label="Password"
+                  placeholder=""
+                  type="password"
+                />
+                <p className="text-center text-small">
+                  Need to create an account?{" "}
+                  <Link size="sm" onPress={() => setSelected("sign-up")}>
+                    Sign up
+                  </Link>
+                </p>
+                <div className="flex gap-2 justify-end">
+                  <Button fullWidth color="primary">
+                    Login
+                  </Button>
+                </div>
+              </form>
+            </Tab>
+            <Tab key="sign-up" title="Sign up">
+              <form className="flex flex-col gap-4 h-[300px]">
+                <Input isRequired label="Name" placeholder="" type="txt" />
+                <Input isRequired label="Email" placeholder="" type="email" />
+                <Input
+                  isRequired
+                  label="Password"
+                  placeholder=""
+                  type="password"
+                />
+                <p className="text-center text-small">
+                  Already have an account?{" "}
+                  <Link size="sm" onPress={() => setSelected("login")}>
+                    Login
+                  </Link>
+                </p>
+                <div className="flex gap-2 justify-end">
+                  <Button fullWidth color="primary">
+                    Sign up
+                  </Button>
+                </div>
+              </form>
+            </Tab>
+          </Tabs>
+        </CardBody>
+      </Card>
+    </div>
+    </div>
   );
 }
-export default login  
- 
+export default login
