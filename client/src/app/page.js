@@ -9,6 +9,7 @@ const main = () => {
     <div className='d1 text-center m-5 '> 
       <h1>    
         Explore
+
       </h1>
         <div className='card'>
           
