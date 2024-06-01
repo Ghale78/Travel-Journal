@@ -1,15 +1,21 @@
 const express = require('express')
+const dbConnect = require('./src/db/connection')
+dbConnect()
 const app = express()
-const port = 4000
+require('dotenv').config()
+const mongoose = require ('mongoose')
+const{ Schema } = mongoose;
 
-app.get('/K', (req, res) => {
-  res.send({
-    name:"Kapil",
-    balance:1000,
-    address:"kalopol",
-  })
+const userSchema = new Schema({
+  name: String,
+  address: String,
+});
+const User = mongoose.model('User', userSchema);
+const port = process.env.PORT
+
+app.post('/K', (req, res) => {
+  User.create({name:"kapil",address:"ktm"})
 })
-
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`listening on port ${port}`)
 })
