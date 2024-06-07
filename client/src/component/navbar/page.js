@@ -1,9 +1,10 @@
 'use client'
 import React from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button} from "@nextui-org/react";
-// import {AcmeLogo} from "./Logo.jsx";
+import Image from "next/image";
 
 const CustomNavbar =()=> {
+  
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
@@ -21,8 +22,6 @@ const CustomNavbar =()=> {
           className="sm:hidden"
         />
         <NavbarBrand>
-          {/* <AcmeLogo />
-          <p className="font-bold text-inherit">ACME</p> */}
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="flex sm:flex gap-4" justify="end">
