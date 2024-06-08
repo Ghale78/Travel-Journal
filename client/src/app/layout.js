@@ -3,6 +3,7 @@ import {NextUIProvider} from "@nextui-org/react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import ReduxProvider from "@/redux/ReduxProvider";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,9 @@ export default function RootLayout({ children })
       <NextUIProvider>
       <ReduxProvider>
         {children}
+        <Toaster
+  position="top-center"
+  reverseOrder={false}/>
         </ReduxProvider>
         </NextUIProvider>
         </body>
